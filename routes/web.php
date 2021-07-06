@@ -33,3 +33,11 @@ Route::get('hello/show', 'HelloController@show');
 Route::get('/bbs','BbsController@index');
 Route::post('/bbs/add','BbsController@add');
 Route::post('/bbs/delete/{id}','BbsController@delete');
+
+
+Route::get('auth/register','Auth\RegisterController@showRegisterationForm');
+Route::post('auth/register','Auth\RegisterController@register');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
