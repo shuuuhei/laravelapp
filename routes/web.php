@@ -31,3 +31,5 @@ Route::post('hello/del', 'HelloController@remove');
 Route::get('hello/show', 'HelloController@show');
 
 Route::get('/bbs','BbsController@index');
+Route::post('/bbs/add','BbsController@add');
+Route::post('/bbs/delete/{id}','BbsController@delete');
